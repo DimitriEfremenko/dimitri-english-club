@@ -19,9 +19,8 @@ header {
     background: url(background.jpg) no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
-    padding: 2rem 0; /* Adjusted padding for smaller screens */
+    padding: 4rem 0;
     text-align: center;
-    position: relative;
 }
 
 header h1 {
@@ -33,67 +32,25 @@ header h1 {
     border-radius: 5px;
 }
 
-.menu-toggle {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    cursor: pointer;
-    z-index: 1000; /* Ensure it's above other content */
-}
-
-.hamburger {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px 0;
-    transition: transform 0.3s ease;
-}
-
-.hamburger::before,
-.hamburger::after {
-    content: '';
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    position: absolute;
-    transition: transform 0.3s ease;
-}
-
-.hamburger::before {
-    transform: translateY(-8px);
-}
-
-.hamburger::after {
-    transform: translateY(8px);
-}
-
-nav {
-    position: absolute;
-    top: 100%; /* Start below header */
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    text-align: center;
-    display: none; /* Initially hidden */
-    transition: top 0.3s ease;
-}
-
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 1rem;
+    border-radius: 5px;
 }
 
 nav ul li {
-    margin-bottom: 1rem;
+    margin: 0 1rem;
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    padding: 1rem 0;
-    display: block;
+    padding: 0.5rem 1rem;
 }
 
 nav ul li a:hover {
@@ -148,91 +105,15 @@ footer {
         font-size: 2rem;
     }
 
-    .menu-toggle {
-        display: block; /* Show hamburger menu toggle */
-    }
-
-    nav {
-        top: 0; /* Bring nav menu to top */
-        display: block; /* Show nav menu */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
-    }
-
-    nav.slide {
-        top: 100%; /* Hide nav menu off-screen when not in use */
+    section h2 {
+        font-size: 1.5rem;
     }
 
     nav ul {
-        padding-top: 1rem; /* Adjust padding for better alignment */
+        flex-direction: column;
     }
 
-    .hamburger {
-        transform: rotate(0deg); /* Initial hamburger menu icon state */
-    }
-
-    .hamburger::before {
-        transform: translateY(0) rotate(0deg); /* Initial state of top line */
-    }
-
-    .hamburger::after {
-        transform: translateY(0) rotate(0deg); /* Initial state of bottom line */
-    }
-
-    /* Adjust hamburger animation on toggle */
-    .menu-toggle.open .hamburger {
-        transform: rotate(45deg);
-    }
-
-    .menu-toggle.open .hamburger::before {
-        transform: translateY(8px) rotate(90deg);
-    }
-
-    .menu-toggle.open .hamburger::after {
-        transform: translateY(-8px) rotate(-90deg);
-    }
-
-    /* Adjust nav menu animation */
-    nav.slide {
-        top: 4rem; /* Ensure enough space for header */
-    }
-
-    /* Responsive Typography Adjustments */
-    header h1 {
-        font-size: 1.8rem; /* Adjusted for smaller screens */
-    }
-
-    nav ul li a {
-        padding: 1rem 0.75rem; /* Adjusted padding for better spacing */
-    }
-
-    section h2 {
-        font-size: 1.5rem; /* Adjusted heading font size */
-    }
-
-    section p {
-        font-size: 0.9rem; /* Adjusted paragraph font size */
-    }
-}
-
-@media (max-width: 576px) {
-    header h1 {
-        font-size: 1.6rem; /* Further reduced font size for smaller screens */
-    }
-
-    .menu-toggle {
-        top: 0.5rem; /* Adjusted top spacing for hamburger icon */
-        right: 0.5rem; /* Adjusted right spacing for hamburger icon */
-    }
-
-    nav ul li a {
-        padding: 0.75rem 0.5rem; /* Further reduced padding for smaller screens */
-    }
-
-    section h2 {
-        font-size: 1.3rem; /* Further reduced heading font size */
-    }
-
-    section p {
-        font-size: 0.85rem; /* Further reduced paragraph font size */
+    nav ul li {
+        margin: 0.5rem 0;
     }
 }
