@@ -1,11 +1,16 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
     color: #333333;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #007BFF;
 }
 
 .container {
@@ -70,7 +75,6 @@ section {
 section h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #007BFF;
 }
 
 section p {
