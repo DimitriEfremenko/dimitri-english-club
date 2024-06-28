@@ -22,6 +22,7 @@ header {
     padding: 4rem 0;
     text-align: center;
     height: 100vh; /* Set header height to full viewport height */
+    overflow: hidden; /* Hide overflow to prevent image resizing on scroll */
 }
 
 header h1 {
