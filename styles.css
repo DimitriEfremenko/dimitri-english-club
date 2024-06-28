@@ -103,6 +103,7 @@ footer {
 @media (max-width: 768px) {
     header {
         background-image: url('background2.jpg');
+        background-size: cover; /* Ensure the background image covers the entire header */
     }
 
     header h1 {
