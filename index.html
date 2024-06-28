@@ -9,7 +9,10 @@
 <body>
     <header>
         <div class="container">
-            <h1>Разговорный клуб Дмитрия Ефременко</h1>
+            <h1><a href="#">Разговорный клуб Дмитрия Ефременко</a></h1>
+            <div class="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#home">Главная</a></li>
@@ -70,5 +73,14 @@
         </div>
     </footer>
 
+    <script>
+        // JavaScript for hamburger menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('slide');
+        });
+    </script>
 </body>
 </html>
