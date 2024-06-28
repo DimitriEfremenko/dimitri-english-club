@@ -16,7 +16,7 @@ body {
 
 /* Header Styles */
 header {
-    background: url(background.jpg) no-repeat center center fixed;
+    background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
     padding: 4rem 0;
@@ -102,8 +102,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     header {
-        background: url(background2.jpg) no-repeat center center fixed;
-        background-size: cover;
+        background-image: url('background2.jpg');
     }
 
     header h1 {
