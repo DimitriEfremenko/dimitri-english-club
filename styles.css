@@ -139,10 +139,11 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     header {
+        height: 100vh;
         background-image: url('background2.jpg');
         background-size: cover;
         background-position: center;
-        background-attachment: scroll; /* Default scroll behavior */
+        background-attachment: fixed; /* Fixed background for parallax effect */
     }
 
     header h1 {
