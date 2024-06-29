@@ -6,11 +6,10 @@ body {
     padding: 0;
     background-color: #f4f4f9;
     color: #333333;
-    height: 100%; /* Ensure full height */
 }
 
 html {
-    height: 100%; /* Ensure full height */
+    height: 100%;
 }
 
 .container {
@@ -22,11 +21,14 @@ html {
 /* Header Styles */
 header {
     background: url('background.jpg') no-repeat center center;
+    background-attachment: fixed; /* Parallax effect */
     background-size: cover;
     color: #ffffff;
-    padding: 4rem 0;
-    text-align: center;
     height: 100vh; /* Full viewport height */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 header h1 {
@@ -62,6 +64,35 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #007BFF;
     border-radius: 5px;
+}
+
+.header-content {
+    margin-top: 20px;
+}
+
+.header-content h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007BFF;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
 }
 
 /* Section Styles */
@@ -111,8 +142,7 @@ footer {
         background-image: url('background2.jpg');
         background-size: cover;
         background-position: center;
-        background-repeat: no-repeat;
-        height: 100vh; /* Full viewport height */
+        background-attachment: fixed; /* Parallax effect */
     }
 
     header h1 {
