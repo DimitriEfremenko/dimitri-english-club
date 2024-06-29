@@ -7,26 +7,31 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Additional inline style for demonstration purposes */
+        .about-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left; /* Adjust text alignment */
+            gap: 20px; /* Spacing between image and text */
+        }
+
         .about-image {
             width: 150px; /* Set width as desired */
             height: 150px; /* Set height to maintain aspect ratio */
-            border-radius: 50%; /* Makes the image round */
-            display: block;
-            margin: 0 auto 20px; /* Center align and add bottom margin */
-            border: 5px solid #ffffff; /* White border for contrast */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+            border-radius: 8px; /* Rounded corners */
+            flex-shrink: 0; /* Prevents image from shrinking */
         }
 
         #about {
-            text-align: center; /* Center align text */
+            text-align: center; /* Center align heading */
         }
 
         #about p {
             max-width: 600px; /* Limit text width */
-            margin: 0 auto; /* Center align text */
-            font-size: 1.2rem; /* Adjust font size */
+            margin: 0; /* Remove default margin */
+            font-size: 1rem; /* Adjust font size */
             line-height: 1.6; /* Adjust line height for readability */
-            color: #666666; /* Adjust text color */
+            color: #333333; /* Adjust text color */
         }
     </style>
 </head>
@@ -61,9 +66,13 @@
         <section id="about">
             <div class="container">
                 <h2>О Дмитрии</h2>
-                <img src="dmitry.jpg" alt="Дмитрий Ефременко" class="about-image">
-                <p>Привет! Меня зовут Дмитрий, и я студент МГУ факультета Иностранных языков и регионоведения. Моя цель - научить вас настоящему разговорному английскому языку! На занятиях мы избавимся от стресса при говорении на английском, достигнем беглости и улучшим английское произношение!</p>
-                <p>Я отличаюсь от остальных студентов факультета тем, что мыслю на языке и говорю как носитель. На занятиях поделюсь с вами секретами достижения этого уровня!</p>
+                <div class="about-section">
+                    <img src="dmitry.jpg" alt="Дмитрий Ефременко" class="about-image">
+                    <div>
+                        <p>Привет! Меня зовут Дмитрий, и я студент МГУ факультета Иностранных языков и регионоведения. Моя цель - научить вас настоящему разговорному английскому языку! На занятиях мы избавимся от стресса при говорении на английском, достигнем беглости и улучшим английское произношение!</p>
+                        <p>Я отличаюсь от остальных студентов факультета тем, что мыслю на языке и говорю как носитель. На занятиях поделюсь с вами секретами достижения этого уровня!</p>
+                    </div>
+                </div>
             </div>
         </section>
 
