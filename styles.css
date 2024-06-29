@@ -6,11 +6,10 @@ body {
     padding: 0;
     background-color: #f4f4f9;
     color: #333333;
-    height: 100%; /* Ensure full height */
 }
 
 html {
-    height: 100%; /* Ensure full height */
+    height: 100%;
 }
 
 .container {
@@ -21,12 +20,12 @@ html {
 
 /* Header Styles */
 header {
-    background: url('background.jpg') no-repeat center center fixed; /* Fixed background */
+    background: url('background.jpg') no-repeat center center;
+    background-attachment: fixed; /* Parallax effect */
     background-size: cover;
     color: #ffffff;
-    padding: 4rem 0;
+    height: 100vh; /* Full viewport height */
     text-align: center;
-    min-height: 100vh; /* Full viewport height */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,6 +69,7 @@ nav ul li a:hover {
 /* Section Styles */
 main {
     padding: 2rem 0;
+    background-color: #fff; /* Background color for content */
 }
 
 section {
@@ -114,8 +114,7 @@ footer {
         background-image: url('background2.jpg');
         background-size: cover;
         background-position: center;
-        background-repeat: no-repeat;
-        min-height: 100vh; /* Full viewport height */
+        background-attachment: fixed; /* Parallax effect */
     }
 
     header h1 {
