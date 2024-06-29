@@ -21,7 +21,7 @@ html {
 
 /* Header Styles */
 header {
-    background: url('background.jpg') no-repeat center center fixed;
+    background: url('background.jpg') no-repeat center center;
     background-size: cover;
     color: #ffffff;
     padding: 4rem 0;
