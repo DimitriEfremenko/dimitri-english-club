@@ -66,32 +66,19 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-.header-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    color: #fff;
-    background-color: #007BFF;
-    text-decoration: none;
-    border-radius: 5px;
+.header-content {
     margin-top: 20px;
-    transition: background-color 0.3s ease;
 }
 
-.header-button:hover {
-    background-color: #0056b3;
-}
-
-.header-subtext {
-    font-size: 1.2rem;
-    color: #fff;
-    margin-top: 10px;
+.header-content h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 5px 10px;
+    padding: 10px 20px;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-/* Button Styles */
 .button {
     display: inline-block;
     padding: 10px 20px;
@@ -102,7 +89,6 @@ nav ul li a:hover {
     border-radius: 5px;
     text-align: center;
     transition: background-color 0.3s ease;
-    margin-top: 1rem;
 }
 
 .button:hover {
@@ -112,7 +98,6 @@ nav ul li a:hover {
 /* Section Styles */
 main {
     padding: 2rem 0;
-    background-color: #fff; /* Background color for content */
 }
 
 section {
