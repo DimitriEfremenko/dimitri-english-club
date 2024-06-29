@@ -29,6 +29,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative; /* Ensure stacking context */
+    z-index: 1; /* Ensure content above background */
 }
 
 header h1 {
@@ -38,6 +40,8 @@ header h1 {
     display: inline-block;
     padding: 0.5rem 1rem;
     border-radius: 5px;
+    position: relative; /* Ensure stacking context */
+    z-index: 2; /* Ensure content above background */
 }
 
 nav ul {
@@ -48,6 +52,8 @@ nav ul {
     background-color: rgba(0, 0, 0, 0.6);
     margin-top: 1rem;
     border-radius: 5px;
+    position: relative; /* Ensure stacking context */
+    z-index: 2; /* Ensure content above background */
 }
 
 nav ul li {
@@ -67,7 +73,8 @@ nav ul li a:hover {
 }
 
 .header-content {
-    margin-top: 20px;
+    margin-top: auto; /* Push content to bottom of header */
+    z-index: 2; /* Ensure content above background */
 }
 
 .header-content h2 {
@@ -98,6 +105,8 @@ nav ul li a:hover {
 /* Section Styles */
 main {
     padding: 2rem 0;
+    position: relative; /* Ensure stacking context */
+    z-index: 1; /* Ensure content above background */
 }
 
 section {
@@ -134,6 +143,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    z-index: 1; /* Ensure content above background */
 }
 
 /* Responsive Design */
