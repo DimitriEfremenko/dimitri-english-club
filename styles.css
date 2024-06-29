@@ -124,28 +124,9 @@ footer {
     z-index: 1; /* Above overlay */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Parallax Effect */
+@media (min-width: 769px) {
     header {
-        background-image: url('background2.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    section h2 {
-        font-size: 1.5rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 0.5rem 0;
+        background-attachment: fixed;
     }
 }
