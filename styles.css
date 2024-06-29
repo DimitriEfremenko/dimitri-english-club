@@ -21,21 +21,35 @@ html {
 
 /* Header Styles */
 header {
+    position: relative;
     background: url('background.jpg') no-repeat center center;
     background-size: cover;
     color: #ffffff;
     padding: 4rem 0;
     text-align: center;
     height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide overflow to prevent image stretching */
+}
+
+header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Overlay color */
+    z-index: -1; /* Behind content */
 }
 
 header h1 {
     font-size: 2.5rem;
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.6);
     display: inline-block;
     padding: 0.5rem 1rem;
     border-radius: 5px;
+    position: relative;
+    z-index: 1; /* Above overlay */
 }
 
 nav ul {
@@ -46,6 +60,8 @@ nav ul {
     background-color: rgba(0, 0, 0, 0.6);
     margin-top: 1rem;
     border-radius: 5px;
+    position: relative;
+    z-index: 1; /* Above overlay */
 }
 
 nav ul li {
@@ -67,6 +83,8 @@ nav ul li a:hover {
 /* Section Styles */
 main {
     padding: 2rem 0;
+    position: relative;
+    z-index: 1; /* Above overlay */
 }
 
 section {
@@ -103,6 +121,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    z-index: 1; /* Above overlay */
 }
 
 /* Responsive Design */
@@ -112,7 +131,6 @@ footer {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 100vh; /* Full viewport height */
     }
 
     header h1 {
