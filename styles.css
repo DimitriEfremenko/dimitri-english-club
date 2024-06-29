@@ -21,7 +21,7 @@ html {
 /* Header Styles */
 header {
     background: url('background.jpg') no-repeat center center;
-    background-attachment: fixed; /* Parallax effect */
+    background-attachment: fixed; /* Fixed background */
     background-size: cover;
     color: #ffffff;
     height: 100vh; /* Full viewport height */
@@ -68,6 +68,9 @@ nav ul li a:hover {
 
 .header-content {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header-content h2 {
@@ -139,7 +142,7 @@ footer {
         background-image: url('background2.jpg');
         background-size: cover;
         background-position: center;
-        background-attachment: fixed; /* Parallax effect */
+        background-attachment: scroll; /* Default scroll behavior */
     }
 
     header h1 {
