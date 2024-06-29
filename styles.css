@@ -22,7 +22,6 @@ header {
     padding: 4rem 0;
     text-align: center;
     height: 100vh; /* Set header height to full viewport height */
-    overflow: hidden; /* Prevents image overflow on mobile */
 }
 
 header h1 {
@@ -66,15 +65,7 @@ main {
 }
 
 section {
-    margin-bottom: 1.5rem; /* Reduce margin between sections */
-    padding-bottom: 1.5rem; /* Add padding between sections */
-    border-bottom: 1px solid #ccc; /* Add a separator line between sections */
-}
-
-section:last-child {
-    margin-bottom: 0; /* Remove margin from last section */
-    padding-bottom: 0; /* Remove padding from last section */
-    border-bottom: none; /* Remove border from last section */
+    margin-bottom: 2rem;
 }
 
 section h2 {
@@ -117,7 +108,6 @@ footer {
         background-position: center; /* Center the background image */
         background-repeat: no-repeat; /* Prevent background image from repeating */
         height: 100vh; /* Set header height to full viewport height */
-        overflow: hidden; /* Prevents image overflow on mobile */
     }
 
     header h1 {
