@@ -6,6 +6,11 @@ body {
     padding: 0;
     background-color: #f4f4f9;
     color: #333333;
+    height: 100%; /* Ensure full height */
+}
+
+html {
+    height: 100%; /* Ensure full height */
 }
 
 .container {
@@ -21,7 +26,7 @@ header {
     color: #ffffff;
     padding: 4rem 0;
     text-align: center;
-    height: 100vh; /* Set header height to full viewport height */
+    height: 100vh; /* Full viewport height */
 }
 
 header h1 {
@@ -104,10 +109,10 @@ footer {
 @media (max-width: 768px) {
     header {
         background-image: url('background2.jpg');
-        background-size: cover; /* Ensure the background image covers the entire header */
-        background-position: center; /* Center the background image */
-        background-repeat: no-repeat; /* Prevent background image from repeating */
-        height: 100vh; /* Set header height to full viewport height */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh; /* Full viewport height */
     }
 
     header h1 {
