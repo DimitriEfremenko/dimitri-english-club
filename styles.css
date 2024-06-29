@@ -66,6 +66,31 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+.header-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #007BFF;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.header-button:hover {
+    background-color: #0056b3;
+}
+
+.header-subtext {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
 /* Button Styles */
 .button {
     display: inline-block;
