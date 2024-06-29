@@ -29,17 +29,32 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative; /* Ensure position relative for proper z-index control */
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.5; /* Adjust opacity as needed */
+    z-index: -1; /* Ensure the pseudo-element is behind content */
 }
 
+@media (max-width: 768px) {
+    header {
+        background-image: url('background2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll; /* Default scroll behavior */
+    }
+}
+
+/* Navigation Styles */
 nav ul {
     list-style: none;
     padding: 0;
@@ -64,35 +79,6 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #007BFF;
     border-radius: 5px;
-}
-
-.header-content {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.header-content h2 {
-    font-size: 1.5rem;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #007BFF;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #0056b3;
 }
 
 /* Section Styles */
@@ -136,37 +122,29 @@ footer {
     width: 100%;
 }
 
-/* Parallax Effect for Header Background */
-@media (min-width: 768px) {
-    header {
-        background: url('background.jpg') no-repeat center center;
-        background-attachment: fixed;
-        background-size: cover;
-    }
+/* About Section Styles */
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* 1 part for image, 2 parts for text */
+    gap: 20px; /* Gap between image and text */
+    align-items: center; /* Center items vertically */
 }
 
-/* Responsive Design */
+.about-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Optional: Adds rounded corners */
+}
+
 @media (max-width: 768px) {
-    header {
-        background-image: url('background2.jpg');
-        background-size: cover;
-        background-position: center;
-        background-attachment: scroll; /* Default scroll behavior */
+    .about-section {
+        grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
     }
 
-    header h1 {
-        font-size: 2rem;
-    }
-
-    section h2 {
-        font-size: 1.5rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 0.5rem 0;
+    .about-image {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 5px; /* Optional: Adds rounded corners */
+        margin-bottom: 20px; /* Add bottom margin */
     }
 }
