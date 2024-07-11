@@ -6,188 +6,36 @@
     <title>Разговорный клуб Дмитрия Ефременко в Москве</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* General Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333333;
+        /* Additional inline style for demonstration purposes */
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr; /* 1 part for image, 2 parts for text */
+            gap: 20px; /* Gap between image and text */
+            align-items: center; /* Center items vertically */
         }
 
-        html, body {
-            height: 100%;
+        .about-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px; /* Optional: Adds rounded corners */
         }
 
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header Styles */
-        header {
-            background: #333333; /* Dark background color */
-            color: #ffffff;
-            height: 100vh; /* Full viewport height */
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative; /* Make sure the container is positioned relatively */
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin: 0;
-            color: #ffffff;
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-            border-radius: 5px;
-        }
-
-        nav ul li {
-            margin: 0 1rem;
-        }
-
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 0.5rem 1rem;
-        }
-
-        nav ul li a:hover {
-            background-color: #007BFF;
-            border-radius: 5px;
-        }
-
-        .header-content {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .header-content h2 {
-            font-size: 1.5rem;
-            color: #ffffff;
-            margin-bottom: 10px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 1rem;
-            color: #fff;
-            background-color: #007BFF;
-            text-decoration: none;
-            border-radius: 5px;
-            text-align: center;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Section Styles */
-        main {
-            padding: 2rem 0;
-        }
-
-        section {
-            margin-bottom: 2rem;
-        }
-
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #007BFF;
-        }
-
-        section p {
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        section a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        section a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer Styles */
-        footer {
-            background: #333333;
-            color: #ffffff;
-            text-align: center;
-            padding: 1rem 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* Company name styles */
-        .company-name {
-            position: absolute;
-            top: 20px; /* Adjusted spacing from the top */
-            left: 20px; /* Adjusted spacing from the left */
-            font-size: 1.5em; /* Increased font size */
-            font-weight: bold;
-            color: rgba(85, 85, 85, 0.8); /* Dimmed grey color */
-            font-family: 'Georgia', serif; /* Elegant font choice */
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Slight shadow for dim effect */
-        }
-
-        /* Parallax Effect for Header Background */
-        @media (min-width: 768px) {
-            header {
-                background: #333333; /* Maintain background color */
-            }
-        }
-
-        /* Responsive Design */
         @media (max-width: 768px) {
-            header {
-                height: auto; /* Adjust height for smaller screens */
+            .about-section {
+                grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
             }
 
-            header h1 {
-                font-size: 2rem;
-            }
-
-            section h2 {
-                font-size: 1.5rem;
-            }
-
-            nav ul {
-                flex-direction: column;
-            }
-
-            nav ul li {
-                margin: 0.5rem 0;
+            .about-image {
+                width: 100%; /* Full width on smaller screens */
+                height: auto; /* Maintain aspect ratio */
+                border-radius: 5px; /* Optional: Adds rounded corners */
+                margin-bottom: 20px; /* Add bottom margin */
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="company-name">Real English with Dimitri</div>
         <div class="container">
             <h1>Разговорный клуб Дмитрия Ефременко в Москве</h1>
             <nav>
@@ -195,26 +43,69 @@
                     <li><a href="#home">Главная</a></li>
                     <li><a href="#about">О Дмитрии</a></li>
                     <li><a href="#meetups">Встречи</a></li>
+                    <li><a href="#prices">Цены</a></li>
+                    <li><a href="#contact">Контакты</a></li>
                 </ul>
             </nav>
         </div>
+        <div class="header-content">
+            <h2>Набор на сентябрь открыт!</h2>
+            <a href="https://t.me/+9N9rYnccFx5kYTBi" class="button">Записаться на встречу</a>
+        </div>
     </header>
+
     <main>
         <section id="home">
-            <h2>Добро пожаловать!</h2>
-            <p>Присоединяйтесь к нашему разговорному клубу, чтобы улучшить свои навыки английского языка в непринужденной и дружественной атмосфере.</p>
+            <div class="container">
+                <h2>Добро пожаловать в наш разговорный клуб английского языка!</h2>
+                <p>Make your speaking skills better with us! Разговорная практика английского языка которая у многих в таком дефиците. Присоединяйтесь к нашему клубу, чтобы улучшить свои навыки говорения на английском языке в дружеской и поддерживающей атмосфере. Наш преподаватель-хост Дмитрий поможет вам обрести уверенность в разговорной речи, улучшить произношение и расширить словарный запас. В нашем клубе вы не только избавитесь от стресса при говорении, обретете беглость и улучшите как культурное так и общее понимание языка, но и обретете множество новых друзей, людей с общими интересами. Мы встречаемся в разных точках в Москвы, локацию определяем путем голосования в телеграмм чате! Не упустите шанс стать частью нашего сообщества и начать говорить на английском как носитель языка! Ta-ra! &#128521</p>
+            </div>
         </section>
+
         <section id="about">
-            <h2>О Дмитрии</h2>
-            <p>Дмитрий Ефременко - опытный преподаватель английского языка с многолетним стажем работы и уникальным подходом к обучению.</p>
+            <div class="container">
+                <h2>О Дмитрии</h2>
+                <div class="about-section">
+                    <img src="dmitry.jpg" alt="Дмитрий Ефременко" class="about-image">
+                    <div>
+                        <p>Hiya! Меня зовут Дмитрий и я студент МГУ факультета Иностранных языков и регионоведения, научу настоящему разговорному английскому языку! На занятиях избавимся от стресса при говорении на английском, добьемся беглости и поставим английское произношение!</p>
+                        <p>На своем факультете я отличаюсь от остальных студентов тем, что я мыслю на языке и говорю как носитель, о том как добиться того же расскажу на занятиях!</p>
+                    </div>
+                </div>
+            </div>
         </section>
+
         <section id="meetups">
-            <h2>Встречи</h2>
-            <p>Наши встречи проходят каждую неделю в разных частях Москвы. Следите за расписанием, чтобы не пропустить следующую встречу!</p>
+            <div class="container">
+                <h2>Расписание встреч</h2>
+<p>Мы встречаемся каждый вторник, пятницу и воскресенье с 18:00 до 19:30. Присоединяйся к чату в <a href="https://t.me/+9N9rYnccFx5kYTBi" target="_blank">телеграмме</a>!</p>
+            </div>
+        </section>
+
+        <section id="prices">
+            <div class="container">
+                <h2>Цены</h2>
+                <p>Индивидуальные занятия: 2000 руб/час</p>
+                <p>Групповые занятия: 1500 руб/час</p>
+                <p>Разговорный клуб 500 руб/1.5 часа</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Контакты</h2>
+                <p>Связаться со мной можно по телефону: +7 928 155-78-43</p>
+                <p>Или через мой профиль в <a href="https://vk.com/id663125605" target="_blank">ВКонтакте</a>.</p>
+                <p>Электронная почта: <a href="mailto:realenglish.withdimitri@mailfence.com">realenglish.withdimitri@mailfence.com</a></p>
+            </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 Разговорный клуб Дмитрия Ефременко. Все права защищены.</p>
+        <div class="container">
+            <p>&copy; 2024 Разговорный клуб Дмитрия Ефременко в Москве</p>
+        </div>
     </footer>
+
 </body>
 </html>
