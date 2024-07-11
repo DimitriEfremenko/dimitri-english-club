@@ -32,25 +32,47 @@
                 margin-bottom: 20px; /* Add bottom margin */
             }
         }
+
+        /* Styling for the company name */
+        .company-name {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            background-color: #f8f9fa; /* Light background color for contrast */
+            padding: 5px 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Adds a slight shadow */
+        }
+
+        /* Styling for header container */
+        .header-container {
+            position: relative; /* Make sure the container is positioned relatively */
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Разговорный клуб Дмитрия Ефременко в Москве</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Главная</a></li>
-                    <li><a href="#about">О Дмитрии</a></li>
-                    <li><a href="#meetups">Встречи</a></li>
-                    <li><a href="#prices">Цены</a></li>
-                    <li><a href="#contact">Контакты</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="header-content">
-            <h2>Набор на сентябрь открыт!</h2>
-            <a href="https://t.me/+9N9rYnccFx5kYTBi" class="button">Записаться на встречу</a>
+        <div class="header-container">
+            <div class="container">
+                <h1>Разговорный клуб Дмитрия Ефременко в Москве</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#about">О Дмитрии</a></li>
+                        <li><a href="#meetups">Встречи</a></li>
+                        <li><a href="#prices">Цены</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-content">
+                <h2>Набор на сентябрь открыт!</h2>
+                <a href="https://t.me/+9N9rYnccFx5kYTBi" class="button">Записаться на встречу</a>
+            </div>
+            <!-- Company name added here -->
+            <div class="company-name">Real English with Dimitri</div>
         </div>
     </header>
 
@@ -78,7 +100,7 @@
         <section id="meetups">
             <div class="container">
                 <h2>Расписание встреч</h2>
-<p>Мы встречаемся каждый вторник, пятницу и воскресенье с 18:00 до 19:30. Присоединяйся к чату в <a href="https://t.me/+9N9rYnccFx5kYTBi" target="_blank">телеграмме</a>!</p>
+                <p>Мы встречаемся каждый вторник, пятницу и воскресенье с 18:00 до 19:30. Присоединяйся к чату в <a href="https://t.me/+9N9rYnccFx5kYTBi" target="_blank">телеграмме</a>!</p>
             </div>
         </section>
 
